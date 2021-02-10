@@ -11259,7 +11259,7 @@ body.sidebar-toggled footer.sticky-footer {
 
 label {
   padding-top: 10px;
-  color: black
+  color: grey;
 }
 
 .bg-title h4 {
@@ -11272,4 +11272,8 @@ label {
 
 .form-control[readonly] {
   background-color: #fff;
+}
+input{
+  justify-content: center;
+/* margin-left: 5px; */
 }
