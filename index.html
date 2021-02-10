@@ -33,10 +33,10 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                <div class="sidebar-brand-icon ">
+                 <img src="./img/medicine.svg" alt="" sizes="" srcset="" style="width: 50px;">
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3"> AMIS </div>
             </a>
 
             <!-- Divider -->
@@ -331,7 +331,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Dorje Lama</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -362,6 +362,161 @@
 
                 </nav>
                 <!-- End of Topbar -->
+
+<!-- content-section-start -->
+
+
+<div class="container-fluid">
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Master Register</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <ol class="breadcrumb">
+                <li><a href="@Url.Action("Index","Home")">Dashboard</a></li>
+                <li class="active">Master Register</li>
+            </ol>
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-1">Date:</label>
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(x => x.DateNepali, new { @class = "form-control", @id = "nepali-datepicker" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <div class="white-box">
+                    <div class="form-group">
+                        <label class="col-md-6">Registering For&nbsp; ( &nbsp;@Html.CheckBoxFor(x => x.IsFirstTime, new { @class = "isFirstTimeCheckbox" }) First Time &nbsp;)</label>
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(x => x.RegistrationId, new { @class = "form-control form-control-line isFirstTimeInput", @placeholder = "Registration Number *" })
+                            @Html.ValidationMessageFor(x => x.RegistrationId, null, new { @style = "color:red" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Service Type</label>
+                        <div class="col-md-12">
+                            @Html.DropDownListFor(x => x.ServiceTypeId, (SelectList)ViewData["ServiceType"], "Select Service Type *", htmlAttributes: new { @class = "form-control form-control-line" })
+                            @Html.ValidationMessageFor(x => x.ServiceTypeId, null, new { @style = "color:red" })
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Amount / &nbsp;<input type="checkbox" class="isFreeCheckbox"> Free Of charge</label>
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(x => x.Cost, new { @class = "form-control form-control-line isFreeInput" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Transfered From</label>
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(x => x.TransferedBy, new { @class = "form-control form-control-line", @placeholder = "Organization Name" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Remarks</label>
+                        <div class="col-md-12">
+                            @Html.TextAreaFor(x => x.Remarks, new { @class = "form-control form-control-line" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="white-box">
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(x => x.PatientInfo.FirstName, new { @class = "form-control form-control-line", @placeholder = "First Name *" })
+                            @Html.ValidationMessageFor(x => x.PatientInfo.FirstName, null, new { @style = "color:red" })
+
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(x => x.PatientInfo.LastName, new { @class = "form-control form-control-line", @placeholder = "Last Name *" })
+                            @Html.ValidationMessageFor(x => x.PatientInfo.LastName, null, new { @style = "color:red" })
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2">Age</label>
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(x => x.PatientInfo.Age, new { @class = "form-control form-control-line" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2">Gender</label>
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(x => x.PatientInfo.Sex, (SelectList)ViewData["Genders"], "Select Gender", htmlAttributes: new { @class = "form-control form-control-line" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2">Contact No</label>
+                        <div class="col-md-4">
+                            @Html.TextBoxFor(x => x.PatientInfo.ContactNumber, new { @class = "form-control form-control-line", @placeholder = "Contact Number *" })
+                            @Html.ValidationMessageFor(x => x.PatientInfo.ContactNumber, null, new { @style = "color:red" })
+                        </div>
+                        <label class="col-md-2">Religion</label>
+                        <div class="col-md-4">
+                            @Html.DropDownListFor(x => x.PatientInfo.ReligionId, (SelectList)ViewData["Religion"], "Select Religion", htmlAttributes: new { @class = "form-control form-control-line" })
+                            @Html.ValidationMessageFor(x => x.PatientInfo.ReligionId, null, new { @style = "color:red" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6">District</label>
+
+                        <div class="col-md-6">
+                            <select name="LocalGovernmentType" class="form-control form-control-line local-government-type" style="visibility: hidden">
+                                <option>Select Municipality/Local Government</option>
+                                <option value="1">Municipality</option>
+                                <option value="2">Local Government</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            @Html.DropDownListFor(x => x.PatientInfo.DistrictId, (SelectList)ViewData["Districts"], "Select Districts", htmlAttributes: new { @class = "form-control form-control-line district-dd" })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.DropDownListFor(x => x.PatientInfo.MunicipalityId, (SelectList)ViewData["Municipality"], "Select Municipality", htmlAttributes: new { @class = "form-control form-control-line municipal-dd", @style = "display:none" })
+                            @Html.DropDownListFor(x => x.PatientInfo.VDCId, (SelectList)ViewData["Districts"], "Select Local Government", htmlAttributes: new { @class = "form-control form-control-line vdc-dd", @style = "display:none" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6">Ward No</label>
+                        <label class="col-md-6">Tole</label>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(x => x.PatientInfo.WardId, new { @class = "form-control form-control-line" })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(x => x.PatientInfo.Tole, new { @class = "form-control form-control-line" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <div class="white-box">
+
+                    <div class="form-group">
+                        <div class="col-sm-12 text-center">
+                            <button type="submit" class="btn btn-success" style="background-color:green">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+<!-- content-section-end -->
+
+
+
+
 
                
     <!-- Logout Modal-->
@@ -400,6 +555,8 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+
+<!--  added  scripts -->
 
 </body>
 

@@ -11250,3 +11250,26 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
+
+
+
+
+
+/* latest added css for content section */
+
+label {
+  padding-top: 10px;
+  color: black
+}
+
+.bg-title h4 {
+  color: black !important;
+}
+
+.form-control-line {
+  padding-top: 13px;
+}
+
+.form-control[readonly] {
+  background-color: #fff;
+}
