@@ -11264,10 +11264,19 @@ label {
 
 .bg-title h4 {
   color: black !important;
+
+
+  /* margin:20px;
+  padding:19px;
+  background-color: #f5f5f5;
+  border:1px solid; */
+  
 }
 
 .form-control-line {
   padding-top: 13px;
+  margin-bottom: 12px;
+  
 }
 
 .form-control[readonly] {
@@ -11276,4 +11285,11 @@ label {
 input{
   justify-content: center;
 /* margin-left: 5px; */
+}
+
+#registerationForm{
+  background-color:whitesmoke;
+  border: 1px solid ;
+  width:fit-content;
+  margin:auto;
 }
