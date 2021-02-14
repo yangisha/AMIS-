@@ -308,7 +308,7 @@ fieldset {
   min-width: 0;
   padding: 0;
   margin: 0;
-  border: 0;
+  border: 2px;
 }
 
 legend {
@@ -11262,6 +11262,11 @@ label {
   color: grey;
 }
 
+.page-title{
+color:black !important ; 
+}
+
+
 .bg-title h4 {
   color: black !important;
 
@@ -11292,4 +11297,9 @@ input{
   border: 1px solid ;
   width:fit-content;
   margin:auto;
+}
+
+.white-box{
+  background-color: white;
+  /* width:650px; */
 }
