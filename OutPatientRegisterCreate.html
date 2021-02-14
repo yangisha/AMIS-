@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -141,17 +143,29 @@
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <!-- <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div> -->
+     
 
-            <!-- Sidebar Message -->
-            <!-- <div class="sidebar-card">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-            </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            " "
 
         </ul>
         <!-- End of Sidebar -->
@@ -170,7 +184,19 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    
+                    <!-- Topbar Search -->
+                    <!-- <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form> -->
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -250,6 +276,8 @@
                             </div>
                         </li>
 
+                    
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -286,292 +314,256 @@
                 </nav>
                 <!-- End of Topbar -->
 
-<!-- content-section-start -->
 
-<section id="form-content-section">
-
+<!-- start of content section -->
 <div class="container-fluid">
-    <h4 class="page-title ">MasterRegister</h4>
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Out Patient Register</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <ol class="breadcrumb">
+                <li><a href="#">Dashboard</a></li>
+                <li class="active">Out Patient Register</li>
+            </ol>
+        </div>
+    </div>
 
-        <div class="col-md-6 ">
-            <div class="form-group">
-                <label class="col-md-1">Date:</label>
-                <div class="col-md-6 ">
-                    <!-- <i class="fa fa-calendar-alt" style="color: black;"></i> -->
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-1">Date:</label>
+                    <div class="col-md-4">
                         <input type="text" class="form-control fa fa-calendar-alt" id="nepali-datepicker" >
-                    
-                    <!-- @Html.TextBoxFor(x => x.DateNepali, new { @class = "form-control", @id = "nepali-datepicker" }) -->
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <div class="white-box">
+                    <div class="form-group">
+                        <label class="col-md-6">Master Register Number</label>
+                        <div class="col-md-12">
 
-        <div class="d-flex row">
-            <div class="col-6 px-2">
-                <div class="bg-white p-4">
-                
-                    <div class="form-group">
-                        <label class="col-md-12"> Registering For the first time
-                            <input type="checkbox" class="isFirstTimeCheckbox">
-                        </label>
-    
-                        <!-- <label class="form-check-label" for="exampleCheck1"></label> -->
-                        <!-- <label class="col-md-6">Registering For&nbsp; ( &nbsp;@Html.CheckBoxFor(x => x.IsFirstTime, new { @class = "isFirstTimeCheckbox" }) First Time &nbsp;)</label> -->
-                        <div class="col-md-12 mt-2">
-                            <!-- <label for="RegisterationId">Registration Id</label> -->
-                            <input type="email" class="form-control form-control-line isFirstTimeInput"
-                                id="exampleInputEmail1" placeholder="Registration Number *">
-    
-                            <!-- @Html.TextBoxFor(x => x.RegistrationId, new { @class = "form-control form-control-line isFirstTimeInput", @placeholder = "Registration Number *" })
-            @Html.ValidationMessageFor(x => x.RegistrationId, null, new { @style = "color:red" }) -->
+                          <input type="text" class=" form-control form-control-line" placeholder=" Master Register Number *">
+                            <!-- @Html.TextBoxFor(x => x.MasterRegisterId, new { @class = "form-control form-control-line", @placeholder = "Master Register Number *" })
+                            @Html.ValidationMessageFor(x => x.MasterRegisterId, null, new { @style = "color:red" }) -->
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-12">Service Type</label>
+                        <label class="col-md-12">OPD Registration Number    <input type="checkbox" class="isFirstTimeCheckbox">  First Time </label>
                         <div class="col-md-12">
-    
-    
-    
-    
-                            <!-- <label for="DropDownListFor">Select Service Type *</label> -->
-                            <select class="form-control form-control-line" id="">
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                            </select>
-                            <!-- @Html.DropDownListFor(x => x.ServiceTypeId, (SelectList)ViewData["ServiceType"], "Select Service Type *", htmlAttributes: new { @class = "form-control form-control-line" })
-            @Html.ValidationMessageFor(x => x.ServiceTypeId, null, new { @style = "color:red" }) -->
-    
-                        </div>
-                    </div>
-    
-                    <div class="form-group">
-                        <label class="col-md-12">Amount / &nbsp;<input type="checkbox"
-                                class="isFreeCheckbox"> Free Of charge</label>
-                        <div class="col-md-12">
-                            <label for="Cost">Cost</label>
-                            <input type="number" class="form-control form-control-line isFreeInput"
-                                id="" placeholder="">
-    
-                            <!-- @Html.TextBoxFor(x => x.Cost, new { @class = "form-control form-control-line isFreeInput" }) -->
-                        </div>
-                    </div>
-    
-                    <div class="form-group">
-                        <label class="col-md-12">Transfered From</label>
-                        <div class="col-md-12">
-                            <!-- <label for="TransferedBy">TransferedBy</label> -->
-                            <input type="text" class="form-control form-control-line " id=""
-                                placeholder="Organization Name">
-                            <!-- 
-            @Html.TextBoxFor(x => x.TransferedBy, new { @class = "form-control form-control-line", @placeholder = "Organization Name" }) -->
+                            <input type="text" name="" id="" class="form-control form-control-line isFirstTimeInput" placeholder="OPD Register Number *">
+                            <!-- @Html.TextBoxFor(x => x.OPDRegistrationNumber.OPDRegistrationNumber1, new { @class = "form-control form-control-line isFirstTimeInput", @placeholder = "OPD Register Number *" })
+                            @Html.ValidationMessageFor(x => x.OPDRegistrationNumber.OPDRegistrationNumber1, null, new { @style = "color:red" }) -->
+
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-12">Remarks</label>
+                        <label class="col-md-12">Disease Code No</label>
                         <div class="col-md-12">
-                            <!-- <label for="Remarks">Remarks</label> -->
-                            <input type="text" class="form-control form-control-line ">
-                            <!-- @Html.TextAreaFor(x => x.Remarks, new { @class = "form-control form-control-line" }) -->
+                            <input type="text" name="" id="" class="form-control form-control-line">
+                            <!-- @Html.TextBoxFor(x => x.DiseaseCodeNo, new { @class = "form-control form-control-line" }) -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Gender Based Violence <input type="checkbox" class="gender-voilence"> </label>
+                    </div>
+                    <div class="form-group ">
+                        <label class="col-md-3">Transfered </label>
+                        <select name="transferedsStatus" class="form-control-line col-md-6 transfered-status mb-3">
+                            <option>Select only if patient is transfered or to be transfered</option>
+                            <option value="1">From</option>
+                            <option value="2">To</option>
+                        </select>
+
+                        <div class="col-md-12">
+                            <input type="text" name="" id="" class="form-control form-control-line transfered-from" placeholder=" Organization Name" style = "display:none">
+                            <input type="text" name="" id="" class="form-control form-control-line transfered-to" placeholder=" Organization Name" style = "display:none">
+                            <!-- @Html.TextBoxFor(x => x.TransferedFromOrganization, new { @class = "form-control form-control-line transfered-from", @placeholder = "Organization Name", @style = "display:none" })
+                            @Html.TextBoxFor(x => x.TransferedToOrganization, new { @class = "form-control form-control-line transfered-to", @placeholder = "Organization Name", @style = "display:none" }) -->
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                
-                <div class="bg-white">
-                
-                 
-                    <div class="form-group">
+            <div class="col-md-6 ">
+                <div class="white-box">
+                    <div class="form-group row pt-3 pl-2 pr-2">
+                        <div class="col-md-6 ">
+                            <input type="text" name="" id="" class="form-control form-control-line" placeholder="First Name *" >
+                            <!-- @Html.TextBoxFor(x => x.PatientInfo.FirstName, new { @class = "form-control form-control-line", @placeholder = "First Name *" })
+                            @Html.ValidationMessageFor(x => x.PatientInfo.FirstName, null, new { @style = "color:red" }) -->
 
-                        <div class="row   mt-1 mx-auto " style="color:gray">
-                          
-                            <!-- <h5 style="color: grey;padding-left: 5px; ">Patient Info</h5> -->
-                            <div class="col-md-6 mt-3 mb-2">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="" id="" class="form-control form-control-line" placeholder=" Last Name *" >
+                            <!-- @Html.TextBoxFor(x => x.PatientInfo.LastName, new { @class = "form-control form-control-line", @placeholder = "Last Name *" })
+                            @Html.ValidationMessageFor(x => x.PatientInfo.LastName, null, new { @style = "color:red" }) -->
 
-                                <!-- <label for="FirstName">First Name</label> -->
-                                <input type="text" class="form-control form-control-line" id=""
-                                    placeholder="First Name *">
-
-
-
-                                <!-- @Html.TextBoxFor(x => x.PatientInfo.FirstName, new { @class = "form-control form-control-line", @placeholder = "First Name *" })
-                @Html.ValidationMessageFor(x => x.PatientInfo.FirstName, null, new { @style = "color:red" }) -->
-
-                            </div>
-                            <div class="col-md-6 mt-3 ">
-
-                                <!-- <label for="LastName">Last Name</label> -->
-                                <input type="text" class="form-control form-control-line " id=""
-                                    placeholder="Last Name *">
-                                <!-- @Html.TextBoxFor(x => x.PatientInfo.LastName, new { @class = "form-control form-control-line", @placeholder = "Last Name *" })
-                @Html.ValidationMessageFor(x => x.PatientInfo.LastName, null, new { @style = "color:red" }) -->
-
-                            </div>
                         </div>
                     </div>
-
-
-
-                    <div class="form-group mt-n4">
-                        <label class="col-md-12  ">Age</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control form-control-line " id=""
-                                placeholder=" ">
+                    <div class="form-group ">
+                        <label class="col-md-2">Age</label>
+                        <div class="col-md-6">
+                            <input type="text" name="" id="" class="form-control form-control-line"  >
                             <!-- @Html.TextBoxFor(x => x.PatientInfo.Age, new { @class = "form-control form-control-line" }) -->
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-12">Gender</label>
-                        <div class="col-md-10 ">
-                            <!-- <label for="Genders">Select Gender</label> -->
-                            <select class="form-control form-control-line " style="height: fit-content;"
-                                id="">
+                        <label class="col-md-2"> Gender</label>
+                        <div class="col-md-6">
+                            <select class="form-control form-control-line" id="">
+                                <option>Select Gender</option>
                                 <option> Male</option>
                                 <option>Female</option>
-
                             </select>
                             <!-- @Html.DropDownListFor(x => x.PatientInfo.Sex, (SelectList)ViewData["Genders"], "Select Gender", htmlAttributes: new { @class = "form-control form-control-line" }) -->
                         </div>
                     </div>
-
-                    <div class="form-group row mt-5">
-                        <label class="col-2 ml-2">Contact </label>
-                        <div class="col-4 mr-3">
-                            <!-- <label for="ContactNumber">Contact Number</label> -->
-                            <input type="text" class="form-control form-control-line " id=""
-                                placeholder="Contact Number *">
+                    <div class="form-group row pl-2 pr-2">
+                        <label class="col-md-6 ">Contact No</label>
+                        <label class="col-md-6">Religion</label>
+                        <div class="col-md-6">
+                            <input type="text" name="" id="" class="form-control form-control-line " placeholder=" Contact Number *" >
                             <!-- @Html.TextBoxFor(x => x.PatientInfo.ContactNumber, new { @class = "form-control form-control-line", @placeholder = "Contact Number *" })
-            @Html.ValidationMessageFor(x => x.PatientInfo.ContactNumber, null, new { @style = "color:red" }) -->
+                            @Html.ValidationMessageFor(x => x.PatientInfo.ContactNumber, null, new { @style = "color:red" }) -->
                         </div>
-                        <label class="col-md-2">Religion</label>
-                        <div class="col-md-3">
+                       
+                        <div class="col-md-6">
+
                             <select class="form-control form-control-line" id="">
-                                <label for="ReligionId">Select Religion</label>
-                                <option></option>
-                                <option></option>
+                                <option>Select Religion</option>
+                                <option> </option>
                                 <option></option>
                             </select>
                             <!-- @Html.DropDownListFor(x => x.PatientInfo.ReligionId, (SelectList)ViewData["Religion"], "Select Religion", htmlAttributes: new { @class = "form-control form-control-line" })
-            @Html.ValidationMessageFor(x => x.PatientInfo.ReligionId, null, new { @style = "color:red" }) -->
+                            @Html.ValidationMessageFor(x => x.PatientInfo.ReligionId, null, new { @style = "color:red" }) -->
                         </div>
                     </div>
-                    <div class="form-group row ml-1">
-                        <label class="col-md-2">Ward No</label>
-
-                        <div class="col-md-4">
-                            <input name="WardId," type="text" class="form-control form-control-line "
-                                id="">
-                            <!-- @Html.TextBoxFor(x => x.PatientInfo.WardId, new { @class = "form-control form-control-line" }) -->
-                        </div>
-                        <label class="col-md-1 ml-4 ">Tole</label>
-                        <div class="col-md-4 ">
-                            
-                            <input name="PatientInfo.Tole," type="text"
-                                class="form-control form-control-line " id="">
-                            <!-- @Html.TextBoxFor(x => x.PatientInfo.Tole, new { @class = "form-control form-control-line" }) -->
-                        </div>
-                    </div>
-
-
-
-
-
 
                     <label class="col-md-6 ">District</label>
+                    <div class="form-group row pl-2">
+                        <div class="col-md-6">
 
-                    <div class="col-md-6">
-                        <!-- <label for="DistrictId">Select Districts</label> -->
-                        <select name='DistrictId' class="form-control form-control-line district-dd"
-                            id="">
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                        </select>
-                        <!-- @Html.DropDownListFor(x => x.PatientInfo.DistrictId, (SelectList)ViewData["Districts"], "Select Districts", htmlAttributes: new { @class = "form-control form-control-line district-dd" }) -->
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-6 ">
-                            <select name="LocalGovernmentType"
-                                class="form-control form-control-line local-government-type fa-text-height"
-                                style="visibility: hidden">
+                            <select class="form-control form-control-line  district-dd" id="">
+                                <option>Select DIstricts</option>
+                                <option> </option>
+                                <option></option>
+                            </select>
+                            <!-- @Html.DropDownListFor(x => x.PatientInfo.DistrictId, (SelectList)ViewData["Districts"], "Select Districts", htmlAttributes: new { @class = "form-control form-control-line district-dd" }) -->
+                        </div>
+
+                        <div class="col-md-6">
+                            <select name="LocalGovernmentType" class="form-control form-control-line local-government-type" style="visibility: hidden">
                                 <option>Select Municipality/Local Government</option>
                                 <option value="1">Municipality</option>
                                 <option value="2">Local Government</option>
                             </select>
                         </div>
 
+                       
                         <div class="col-md-6 ">
-                            <select name='MunicipalityId'
-                                class="form-control form-control-line municipal-dd" id=""
-                                style="display: none;">
-                                <label for="MunicipalityId">Select Municipality</label>
-                                <option></option>
-                                <option></option>
-                                <option></option>
+                            <select name="LocalGovernmentType" class="form-control form-control-line municipal-dd " style="display: none;">
+                                <option>Select Municipality</option>
+                                <option value="1"></option>
+                                <option value="2"></option>
                             </select>
-                            <!-- @Html.DropDownListFor(x => x.PatientInfo.MunicipalityId, (SelectList)ViewData["Municipality"], "Select Municipality", htmlAttributes: new { @class = "form-control form-control-line municipal-dd", @style = "display:none" }) -->
-                            <!-- @Html.DropDownListFor(x => x.PatientInfo.VDCId, (SelectList)ViewData["Districts"], "Select Local Government", htmlAttributes: new { @class = "form-control form-control-line vdc-dd", @style = "display:none" }) -->
-                            <select name='VDCId' class="form-control form-control-line vdc-dd" id=""
-                                style="display: none;">
-                                <label for="VDCId">Select VDC</label>
-                                <option></option>
-                                <option></option>
-                                <option></option>
+                            <select name=" " class="form-control form-control-line vdc-dd " style="display: none;">
+                                <option>Select  VDC</option>
+                                <option value="1"></option>
+                                <option value="2"></option>
                             </select>
-
+                            <!-- @Html.DropDownListFor(x => x.PatientInfo.MunicipalityId, (SelectList)ViewData["Municipality"], "Select Municipality", htmlAttributes: new { @class = "form-control form-control-line municipal-dd", @style = "display:none" })
+                            @Html.DropDownListFor(x => x.PatientInfo.VDCId, (SelectList)ViewData["Districts"], "Select Local Government", htmlAttributes: new { @class = "form-control form-control-line vdc-dd", @style = "display:none" }) -->
                         </div>
                     </div>
-                  
+                    <div class="form-group row pl-2 pr-2">
+                        <label class="col-md-6">Ward No</label>
+                        <label class="col-md-6">Tole</label>
+                        <div class="col-md-6">
+                            <input type="text" name="" class="form-control form-control-line" id="">
+                            <!-- @Html.TextBoxFor(x => x.PatientInfo.WardId, new { @class = "form-control form-control-line" }) -->
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="" class="form-control form-control-line" id="">
+                            <!-- @Html.TextBoxFor(x => x.PatientInfo.Tole, new { @class = "form-control form-control-line" }) -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xs-12" >
+                <div class="white-box">
+
+                    <div class="form-group">
+                        <label class="col-md-12">Research Oriented Tests</label>
+                        <div class="col-md-12">
+                            <input type="text" name="" class="form-control form-control-line" id="">
+                            <!-- @Html.TextBoxFor(x => x.ResearchOrientedTests, new { @class = "form-control form-control-line" }) -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Provisional Diagnosis</label>
+                        <div class="col-md-12">
+                            <input type="text" name="" class="form-control form-control-line" id="">
+                            <!-- @Html.TextBoxFor(x => x.ProvisionalDiagnosis, new { @class = "form-control form-control-line" }) -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12" >
+                <div class="white-box">
+                    <div class="form-group">
+                        <label class="col-md-12">Treatment And Advice</label>
+                        <div class="col-md-12">
+                            <input type="text" name="" class="form-control form-control-line" id="">
+                            <!-- @Html.TextBoxFor(x => x.TreatmentAndAdvice, new { @class = "form-control form-control-line" }) -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Ayurvedic Therapy</label>
+                        <div class="col-md-12">
+                            <input type="text" name="" class="form-control form-control-line" id="">
+                            <!-- @Html.TextBoxFor(x => x.AyurvedicTherapy, new { @class = "form-control form-control-line" }) -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="row  ">
+        <div class="row">
             <div class="col-md-12 col-xs-12">
                 <div class="">
-                    <div class="form-group ">
-                        <div class="col-sm-12 text-center ">
-                            <button type="submit" class="btn btn-success"
-                                style="background-color:green">Submit</button>
+
+                    <div class="form-group">
+                        <div class="col-sm-12 text-center">
+                            <button type="submit" class="btn btn-success" style="background-color:green">Submit</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-</section>
+    
+</div>
 
 
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
 
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
 
-
-
-
-<!-- content-section-end -->
-
-
-
-
-
-               
-  
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
 
 <!--   new  added  scripts and  from cshtml -->
 <link rel="stylesheet" href="./css/nepali.datepicker.v3.1.min.css">
