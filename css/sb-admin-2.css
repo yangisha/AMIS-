@@ -11268,14 +11268,7 @@ color:black !important ;
 
 
 .bg-title h4 {
-  color: black !important;
-
-
-  /* margin:20px;
-  padding:19px;
-  background-color: #f5f5f5;
-  border:1px solid; */
-  
+  color: black !important;  
 }
 
 .form-control-line {
@@ -11305,6 +11298,13 @@ input{
 }
 
 
+.login-box{
+ 
+  width:420px;
+  margin:auto;
+  margin-top: 200px;
+padding:1px;
+}
  /* label {
         padding-top: 10px;
         color: black
