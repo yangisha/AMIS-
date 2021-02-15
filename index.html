@@ -298,7 +298,7 @@
                                 </nav>
                             </div>
                         </div>
-                        <div class="col-md-6 ">
+                        <div class="col-md-6 ml-n4 ">
                             <div class="form-group">
                                 <label class="col-md-1">Date:</label>
                                 <div class="col-md-6 ">
@@ -381,7 +381,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-6 mx-auto">
 
                                 <div class="bg-white">
 
@@ -399,8 +399,7 @@
 
 
 
-                                                <!-- @Html.TextBoxFor(x => x.PatientInfo.FirstName, new { @class = "form-control form-control-line", @placeholder = "First Name *" })
-                @Html.ValidationMessageFor(x => x.PatientInfo.FirstName, null, new { @style = "color:red" }) -->
+                                                
 
                                             </div>
                                             <div class="col-md-6 mt-3 ">
@@ -408,9 +407,6 @@
                                                 <!-- <label for="LastName">Last Name</label> -->
                                                 <input type="text" class="form-control form-control-line " id=""
                                                     placeholder="Last Name *">
-                                                <!-- @Html.TextBoxFor(x => x.PatientInfo.LastName, new { @class = "form-control form-control-line", @placeholder = "Last Name *" })
-                @Html.ValidationMessageFor(x => x.PatientInfo.LastName, null, new { @style = "color:red" }) -->
-
                                             </div>
                                         </div>
                                     </div>
@@ -426,8 +422,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-12">Gender</label>
-                                        <div class="col-md-10 ">
+                                        <label class="col-md-12 ">Gender</label>
+                                        <div class="col-md-10  ">
                                             <!-- <label for="Genders">Select Gender</label> -->
                                             <select class="form-control form-control-line " style="height: fit-content;"
                                                 id="">
@@ -440,15 +436,15 @@
                                     </div>
 
                                     <div class="form-group row mt-5">
-                                        <label class="col-2 ml-2">Contact </label>
-                                        <div class="col-4 mr-3">
+                                        <label class="col-md-2 ml-3">Contact </label>
+                                        <div class="col--md-4 mr-1">
                                             <!-- <label for="ContactNumber">Contact Number</label> -->
                                             <input type="text" class="form-control form-control-line " id=""
                                                 placeholder="Contact Number *">
                                             <!-- @Html.TextBoxFor(x => x.PatientInfo.ContactNumber, new { @class = "form-control form-control-line", @placeholder = "Contact Number *" })
             @Html.ValidationMessageFor(x => x.PatientInfo.ContactNumber, null, new { @style = "color:red" }) -->
                                         </div>
-                                        <label class="col-md-2">Religion</label>
+                                        <label class="col-md-2 ml-1">Religion</label>
                                         <div class="col-md-3">
                                             <select class="form-control form-control-line" id="">
                                                 <label for="ReligionId">Select Religion</label>
@@ -482,9 +478,9 @@
 
 
 
-                                    <label class="col-md-6 ">District</label>
+                                    <label class="col-md-6 ml-1">District</label>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 ml-1">
                                         <!-- <label for="DistrictId">Select Districts</label> -->
                                         <select name='DistrictId' class="form-control form-control-line district-dd"
                                             id="">
@@ -497,7 +493,7 @@
                                     <div class="form-group">
                                         <div class="col-md-6 ">
                                             <select name="LocalGovernmentType"
-                                                class="form-control form-control-line local-government-type fa-text-height"
+                                                class="form-control form-control-line local-government-type fa-text-height ml-1"
                                                 style="visibility: hidden">
                                                 <option>Select Municipality/Local Government</option>
                                                 <option value="1">Municipality</option>
@@ -507,21 +503,21 @@
 
                                         <div class="col-md-6 ">
                                             <select name='MunicipalityId'
-                                                class="form-control form-control-line municipal-dd" id=""
+                                                class="form-control form-control-line municipal-dd ml-1 " id=""
                                                 style="display: none;">
                                                 <label for="MunicipalityId">Select Municipality</label>
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
+                                                <option>mm1</option>
+                                                <option>mm2</option>
+                                                <option>mm3</option>
                                             </select>
                                             <!-- @Html.DropDownListFor(x => x.PatientInfo.MunicipalityId, (SelectList)ViewData["Municipality"], "Select Municipality", htmlAttributes: new { @class = "form-control form-control-line municipal-dd", @style = "display:none" }) -->
                                             <!-- @Html.DropDownListFor(x => x.PatientInfo.VDCId, (SelectList)ViewData["Districts"], "Select Local Government", htmlAttributes: new { @class = "form-control form-control-line vdc-dd", @style = "display:none" }) -->
-                                            <select name='VDCId' class="form-control form-control-line vdc-dd" id=""
+                                            <select name='VDCId' class="form-control form-control-line vdc-dd ml-1 pb-3 " id=""
                                                 style="display: none;">
                                                 <label for="VDCId">Select VDC</label>
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
+                                                <option>vdc1</option>
+                                                <option>vdc2</option>
+                                                <option>vdc3</option>
                                             </select>
 
                                         </div>
